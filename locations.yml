@@ -1,0 +1,7 @@
+defaultStorageMapping: null
+fileVersion: 1
+locations:
+  - DESTINATION
+  - GOOGLE_SHEETS
+  - SRC
+  - TARGET
