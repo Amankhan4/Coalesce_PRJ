@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+name: SAP_MATERIAL
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c68c590-fece-4e60-9006-1cb73c4aefb3
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: _ROW
+        nullable: false
+        primaryKey: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 209291d7-27f6-45c5-8e86-a5225f81ed2f
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        defaultValue: ""
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f286d8a2-f4a2-4b47-be56-7c532c398cca
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: MATERIAL_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5aadaa69-ced8-4f1a-9d42-2812dcf549a0
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: MATERIAL_DESC
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdd7ec71-332d-407f-bce2-a82ad3a80dd0
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e1f3164e-2efe-4d01-8705-bf3e6a480894
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: BASE_UOM
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 15d68041-67d9-4bb4-945b-77138a865c65
+          stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        config: {}
+        dataType: VARCHAR(256)
+        defaultValue: ""
+        description: ""
+        name: MATERIAL_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: SAP_MATERIAL
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

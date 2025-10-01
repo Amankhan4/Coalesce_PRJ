@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 397a4434-266c-419f-aef9-e69e5e36ca1e
+name: V_SAP_CUSTOMERS
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c0037fb-4898-4cf5-af5e-d9a707f692e1
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: _ROW
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3822fdf-25e0-4ce9-998c-a73fc3e0bcba
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4248e48b-f925-43d6-b9db-d316b1f9b0dd
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c5314a6e-4ba6-400a-979b-e8f37a50ef26
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c84e44cd-74c1-481c-b439-b42ba4da6118
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c698f10a-71fd-42bc-9d79-481fabe12818
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13fd9c98-ee87-4693-91b4-e0c9cd1d18e6
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f2bb8c8-bafb-470d-817f-d6670a0c4d10
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56f0845d-14ee-451b-86bb-bb575cccc004
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CUSTOMER_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9314b6c7-852c-474f-967f-3f5310c3eb50
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0652c737-b9f3-4532-a210-9db8ef724728
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 443ad043-b313-48b4-bd86-bbfd4a2a9155
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e23fc2c3-f31d-4468-80a7-f6b464d76e1d
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a74f5ca9-8d9d-45d8-962a-4b7dbcd8d6e7
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: de927f14-4a2b-4579-9483-9176e8ec4b28
+          stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1272acdd-aca9-4585-b604-24702df27377
+                stepCounter: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SAP_CUSTOMERS: 54cf9cb8-6a52-432a-8029-e6e6a73f5463
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SAP_CUSTOMERS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SAP_CUSTOMERS') }} "SAP_CUSTOMERS"
+        name: V_SAP_CUSTOMERS
+        noLinkRefs: []
+  name: V_SAP_CUSTOMERS
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,135 @@
+fileVersion: 1
+id: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+name: V_SAP_MATERIAL
+operation:
+  config:
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24bb5fdf-0c7b-4617-b79a-7865a4b83629
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: _ROW
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2c68c590-fece-4e60-9006-1cb73c4aefb3
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0b9e88c-2090-432d-8915-0e25df251520
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 209291d7-27f6-45c5-8e86-a5225f81ed2f
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9657e668-e1f1-4694-bd60-622eaf8ea694
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MATERIAL_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f286d8a2-f4a2-4b47-be56-7c532c398cca
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c5c9ca8-70fb-41fa-9c39-b46e6f95f782
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MATERIAL_DESC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5aadaa69-ced8-4f1a-9d42-2812dcf549a0
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 680ad23a-13da-49db-b380-b288b923e219
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: DATE
+        description: ""
+        name: CREATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cdd7ec71-332d-407f-bce2-a82ad3a80dd0
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef7eed79-6cc9-4307-a401-be37a74fe599
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BASE_UOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e1f3164e-2efe-4d01-8705-bf3e6a480894
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb2985f0-0cf1-4e83-9437-4fd6d0d49ba6
+          stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MATERIAL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 15d68041-67d9-4bb4-945b-77138a865c65
+                stepCounter: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SAP_MATERIAL: 7d45f99f-0a0b-4180-b40f-e41f3df09215
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SAP_MATERIAL
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SAP_MATERIAL') }} "SAP_MATERIAL"
+        name: V_SAP_MATERIAL
+        noLinkRefs: []
+  name: V_SAP_MATERIAL
+  overrideSQL: false
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

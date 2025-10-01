@@ -1,0 +1,289 @@
+fileVersion: 1
+id: e6abdaaa-e008-45fa-a359-2fca8a432072
+name: INT_SALES_ORDRE_SAP
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 604d8a5b-936d-43a3-b716-c44467d983d8
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c84e44cd-74c1-481c-b439-b42ba4da6118
+                stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4d1bdc5-0fd1-4374-809c-91b235438c7e
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13fd9c98-ee87-4693-91b4-e0c9cd1d18e6
+                stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 003d9af1-6973-43c9-8f63-1bbb43fcbd66
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CUSTOMER_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56f0845d-14ee-451b-86bb-bb575cccc004
+                stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a34bbb3e-20c8-4349-9d57-c9b358e3e60c
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de927f14-4a2b-4579-9483-9176e8ec4b28
+                stepCounter: 397a4434-266c-419f-aef9-e69e5e36ca1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93858843-98cd-493f-958e-22df3a55f5d4
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: _ROW
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62861dca-6bdb-445f-8d89-29d184a84462
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b135bd3-d551-45bd-9a5d-ef58ac9fb92b
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: TIMESTAMP_TZ(9)
+        description: ""
+        name: _FIVETRAN_SYNCED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8173b17b-0198-43b9-9691-6d43c3d4a6b5
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29a58ad3-b96b-4d39-8b8b-a84f53855d0e
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CURRENCY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e2ae52fb-1bc0-4c0c-96d3-8dec41b708f7
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4407646-a183-48a8-8350-b3635ea9f42a
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: SALES_ORG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 64c6830a-0cba-4850-9f94-6bc636989446
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6edd2ffc-ba10-41e2-a813-78de788791f0
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a45affd-020d-4935-965b-9d3d813fbb11
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a8001b0b-d2a9-4c9d-aba8-ef44a72f070f
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ORDER_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad678f3e-af88-4d93-882e-87b9e84c89ee
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 08ded9f3-2217-45e0-833b-e8e74dd626a7
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6ecfb1f6-ebea-467d-bd69-dda52af9b3b3
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a3550cf-6a47-43e5-9fb4-8562bc9a4d5b
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7488684a-86e6-4359-b7af-b5d866109958
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93b18cff-9e50-4ecb-8fbd-8e805cb456a0
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f770870f-85ab-4fe9-9b30-6f13a4704b30
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ce534b5f-1a4e-46a5-a910-93e0cb358d56
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MATERIAL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8c8d02bf-f40b-413e-92c7-6881b0db3b77
+                stepCounter: b5dd611f-54d2-4343-b260-e22e83a78ae4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe74dae6-9be9-4e04-a12f-308d012eca34
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MATERIAL_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9657e668-e1f1-4694-bd60-622eaf8ea694
+                stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93e79f7e-3fab-45f8-8903-c5cd8bfa2c5c
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: MATERIAL_DESC
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c5c9ca8-70fb-41fa-9c39-b46e6f95f782
+                stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09733354-ddbe-4432-914e-44dae9d64db5
+          stepCounter: e6abdaaa-e008-45fa-a359-2fca8a432072
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: BASE_UOM
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef7eed79-6cc9-4307-a401-be37a74fe599
+                stepCounter: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          V_SAP_CUSTOMERS: 397a4434-266c-419f-aef9-e69e5e36ca1e
+          V_SAP_MATERIAL: 50d90750-d2c4-476e-9ee1-123db06cdfd9
+          V_SAP_SALES_ORDERS: b5dd611f-54d2-4343-b260-e22e83a78ae4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: V_SAP_CUSTOMERS
+          - locationName: SRC
+            nodeName: V_SAP_MATERIAL
+          - locationName: SRC
+            nodeName: V_SAP_SALES_ORDERS
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'V_SAP_SALES_ORDERS') }} "V_SAP_SALES_ORDERS"
+            INNER JOIN {{ ref('SRC', 'V_SAP_CUSTOMERS') }} "V_SAP_CUSTOMERS"
+            ON "V_SAP_SALES_ORDERS"."CUSTOMER_ID" = "V_SAP_CUSTOMERS"."CUSTOMER_ID"
+            INNER JOIN {{ ref('SRC', 'V_SAP_MATERIAL') }} "V_SAP_MATERIAL"
+            ON "V_SAP_SALES_ORDERS"."MATERIAL_ID" = "V_SAP_MATERIAL"."MATERIAL_ID"
+        name: INT_SALES_ORDRE_SAP
+        noLinkRefs: []
+  name: INT_SALES_ORDRE_SAP
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
