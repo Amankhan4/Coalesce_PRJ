@@ -1,0 +1,17 @@
+fileVersion: 1
+id: "11"
+mappingDefinitions:
+  DESTINATION:
+    database: TARGET
+    schema: CURATED
+  GOOGLE_SHEETS:
+    database: DEV_RAW
+    schema: SAP
+  SRC:
+    database: DEV_RAW
+    schema: GOOGLE_SHEETS
+  TARGET:
+    database: DEV_RAW
+    schema: PUBLIC
+name: DEV
+type: Environment
