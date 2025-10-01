@@ -1,0 +1,28 @@
+fileVersion: 1
+id: "1"
+macroString: |
+  {% macro IncrementaLoad(parent_node_aliases_list, parent_nodes_timestamp_field, child_nodes_location_name_list, child_nodes_timestamp_field) %}
+  WHERE {{- IdentifyNewRecords(parent_node_aliases_list, parent_nodes_timestamp_field) -}}
+  >
+  {{- ComputeWatermark(child_nodes_location_name_list, child_nodes_timestamp_field) -}}
+  {%- endmacro -%}
+  
+  {% macro IdentifyNewRecords(parent_node_aliases_list, parent_nodes_timestamp_field)%}
+  GREATEST(
+      {%- for node_name in parent_node_aliases_list.replace(" ","").split(',') %}
+      {%- if not loop.first -%},{%- endif -%}COALESCE("{{ node_name }}"."{{ parent_nodes_timestamp_field }}", TO_TIMESTAMP('1900-01-01 00:00:00'))
+      {%- endfor -%}
+  )
+  {%- endmacro -%}
+  
+  {% macro ComputeWatermark(child_nodes_location_name_list, child_nodes_timestamp_field)%}
+  LEAST(
+  {%- for location_and_name in child_nodes_location_name_list.replace(" ","").split(',') -%}
+  COALESCE((SELECT MAX("{{location_and_name.split(':')[1]}}"."{{child_nodes_timestamp_field}}") FROM {{ ref_no_link(location_and_name.split(':')[0], location_and_name.split(':')[1]) }} "{{ location_and_name.split(':')[1] }}")
+                  , TO_TIMESTAMP('1900-01-01 00:00:00'))
+  {%- if not loop.last -%},{%- endif -%}
+  {%- endfor -%}
+  )
+  {%- endmacro -%}
+name: macro
+type: Macro
